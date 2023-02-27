@@ -1,0 +1,82 @@
+[debug] [2023-02-27T06:18:20.390Z] ----------------------------------------------------------------------
+[debug] [2023-02-27T06:18:20.393Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Zimaster\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-02-27T06:18:20.394Z] CLI Version:   11.24.0
+[debug] [2023-02-27T06:18:20.394Z] Platform:      win32
+[debug] [2023-02-27T06:18:20.394Z] Node Version:  v18.14.0
+[debug] [2023-02-27T06:18:20.395Z] Time:          Mon Feb 27 2023 09:18:20 GMT+0300 (East Africa Time)
+[debug] [2023-02-27T06:18:20.396Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-27T06:18:20.592Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-27T06:18:20.592Z] > authorizing via signed-in user (codesimonwise@gmail.com)
+[debug] [2023-02-27T06:18:20.593Z] [iam] checking project zimaster-studywithme for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-02-27T06:18:20.596Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/zimaster-studywithme:testIamPermissions [none]
+[debug] [2023-02-27T06:18:20.596Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/zimaster-studywithme:testIamPermissions x-goog-quota-user=projects/zimaster-studywithme
+[debug] [2023-02-27T06:18:20.596Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/zimaster-studywithme:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-02-27T06:18:22.400Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/zimaster-studywithme:testIamPermissions 200
+[debug] [2023-02-27T06:18:22.401Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/zimaster-studywithme:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-02-27T06:18:22.402Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/zimaster-studywithme [none]
+[debug] [2023-02-27T06:18:22.983Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/zimaster-studywithme 200
+[debug] [2023-02-27T06:18:22.983Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/zimaster-studywithme {"projectId":"zimaster-studywithme","projectNumber":"681825239052","displayName":"zimaster-studywithme","name":"projects/zimaster-studywithme","resources":{"hostingSite":"zimaster-studywithme"},"state":"ACTIVE","etag":"1_7535e70c-e67d-4a71-9c31-30ee6d6a06c5"}
+[info] 
+[info] === Deploying to 'zimaster-studywithme'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-02-27T06:18:23.006Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/zimaster-studywithme/versions [none]
+[debug] [2023-02-27T06:18:23.006Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/zimaster-studywithme/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-02-27T06:18:26.010Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/zimaster-studywithme/versions 200
+[debug] [2023-02-27T06:18:26.010Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/zimaster-studywithme/versions {"name":"projects/681825239052/sites/zimaster-studywithme/versions/86616edafede2501","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[zimaster-studywithme]: beginning deploy... 
+[info] i  hosting[zimaster-studywithme]: found 4 files in build 
+[debug] [2023-02-27T06:18:26.039Z] [hosting] uploading with 200 concurrency
+[debug] [2023-02-27T06:18:26.057Z] [hosting] hash cache [YnVpbGQ] not populated
+[debug] [2023-02-27T06:18:26.098Z] [hosting] hash cache [YnVpbGQ] stored for 4 files
+[debug] [2023-02-27T06:18:26.099Z] [hosting][hash queue][FINAL] {"max":36,"min":33,"avg":34,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":39}
+[debug] [2023-02-27T06:18:26.100Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/681825239052/sites/zimaster-studywithme/versions/86616edafede2501:populateFiles [none]
+[debug] [2023-02-27T06:18:26.100Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/681825239052/sites/zimaster-studywithme/versions/86616edafede2501:populateFiles {"files":{"/index.html":"2d2e51a727cee4f87bccd699144f6dfef168f5de993843479eefd1d5e221e102","/js/main.js":"85c72ec34e451c73cbe675620ce3492bc18a062d8ced3f9b382fef6f0b680870","/css/main.css":"b097db3b2279ccda68e6582c3ae7455be05d8a93cd72bf1113d6b3809682439c","/404.html":"daa499dd96d8229e73235345702ba32f0793f0c8e5c0d30e40e37a5872be57aa"}}
+[debug] [2023-02-27T06:18:27.851Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/681825239052/sites/zimaster-studywithme/versions/86616edafede2501:populateFiles 200
+[debug] [2023-02-27T06:18:27.851Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/681825239052/sites/zimaster-studywithme/versions/86616edafede2501:populateFiles {"uploadRequiredHashes":["2d2e51a727cee4f87bccd699144f6dfef168f5de993843479eefd1d5e221e102","85c72ec34e451c73cbe675620ce3492bc18a062d8ced3f9b382fef6f0b680870","b097db3b2279ccda68e6582c3ae7455be05d8a93cd72bf1113d6b3809682439c","daa499dd96d8229e73235345702ba32f0793f0c8e5c0d30e40e37a5872be57aa"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/zimaster-studywithme/versions/86616edafede2501/files"}
+[debug] [2023-02-27T06:18:27.853Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/zimaster-studywithme/versions/86616edafede2501/files/2d2e51a727cee4f87bccd699144f6dfef168f5de993843479eefd1d5e221e102 [none]
+[debug] [2023-02-27T06:18:27.853Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/zimaster-studywithme/versions/86616edafede2501/files/2d2e51a727cee4f87bccd699144f6dfef168f5de993843479eefd1d5e221e102 [stream]
+[debug] [2023-02-27T06:18:27.855Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/zimaster-studywithme/versions/86616edafede2501/files/85c72ec34e451c73cbe675620ce3492bc18a062d8ced3f9b382fef6f0b680870 [none]
+[debug] [2023-02-27T06:18:27.856Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/zimaster-studywithme/versions/86616edafede2501/files/85c72ec34e451c73cbe675620ce3492bc18a062d8ced3f9b382fef6f0b680870 [stream]
+[debug] [2023-02-27T06:18:27.858Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/zimaster-studywithme/versions/86616edafede2501/files/b097db3b2279ccda68e6582c3ae7455be05d8a93cd72bf1113d6b3809682439c [none]
+[debug] [2023-02-27T06:18:27.858Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/zimaster-studywithme/versions/86616edafede2501/files/b097db3b2279ccda68e6582c3ae7455be05d8a93cd72bf1113d6b3809682439c [stream]
+[debug] [2023-02-27T06:18:27.860Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/zimaster-studywithme/versions/86616edafede2501/files/daa499dd96d8229e73235345702ba32f0793f0c8e5c0d30e40e37a5872be57aa [none]
+[debug] [2023-02-27T06:18:27.860Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/zimaster-studywithme/versions/86616edafede2501/files/daa499dd96d8229e73235345702ba32f0793f0c8e5c0d30e40e37a5872be57aa [stream]
+[debug] [2023-02-27T06:18:27.862Z] [hosting][populate queue][FINAL] {"max":1757,"min":1757,"avg":1757,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1766}
+[debug] [2023-02-27T06:18:27.862Z] [hosting] uploads queued: 4
+[debug] [2023-02-27T06:18:29.147Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/zimaster-studywithme/versions/86616edafede2501/files/daa499dd96d8229e73235345702ba32f0793f0c8e5c0d30e40e37a5872be57aa 200
+[debug] [2023-02-27T06:18:29.148Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/zimaster-studywithme/versions/86616edafede2501/files/daa499dd96d8229e73235345702ba32f0793f0c8e5c0d30e40e37a5872be57aa [stream]
+[debug] [2023-02-27T06:18:29.160Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/zimaster-studywithme/versions/86616edafede2501/files/85c72ec34e451c73cbe675620ce3492bc18a062d8ced3f9b382fef6f0b680870 200
+[debug] [2023-02-27T06:18:29.160Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/zimaster-studywithme/versions/86616edafede2501/files/85c72ec34e451c73cbe675620ce3492bc18a062d8ced3f9b382fef6f0b680870 [stream]
+[debug] [2023-02-27T06:18:29.345Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/zimaster-studywithme/versions/86616edafede2501/files/2d2e51a727cee4f87bccd699144f6dfef168f5de993843479eefd1d5e221e102 200
+[debug] [2023-02-27T06:18:29.345Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/zimaster-studywithme/versions/86616edafede2501/files/2d2e51a727cee4f87bccd699144f6dfef168f5de993843479eefd1d5e221e102 [stream]
+[debug] [2023-02-27T06:18:29.602Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/zimaster-studywithme/versions/86616edafede2501/files/b097db3b2279ccda68e6582c3ae7455be05d8a93cd72bf1113d6b3809682439c 200
+[debug] [2023-02-27T06:18:29.603Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/zimaster-studywithme/versions/86616edafede2501/files/b097db3b2279ccda68e6582c3ae7455be05d8a93cd72bf1113d6b3809682439c [stream]
+[debug] [2023-02-27T06:18:29.603Z] [hosting][upload queue][FINAL] {"max":1751,"min":1296,"avg":1462.25,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":1752}
+[info] +  hosting[zimaster-studywithme]: file upload complete 
+[debug] [2023-02-27T06:18:29.604Z] [hosting] deploy completed after 3592ms
+[debug] [2023-02-27T06:18:29.609Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "zimaster-studywithme"
+    },
+    "version": "projects/681825239052/sites/zimaster-studywithme/versions/86616edafede2501"
+  }
+]
+[info] i  hosting[zimaster-studywithme]: finalizing version... 
+[debug] [2023-02-27T06:18:29.614Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/zimaster-studywithme/versions/86616edafede2501 updateMask=status%2Cconfig
+[debug] [2023-02-27T06:18:29.614Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/zimaster-studywithme/versions/86616edafede2501 {"status":"FINALIZED","config":{}}
+[debug] [2023-02-27T06:18:31.407Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/zimaster-studywithme/versions/86616edafede2501 200
+[debug] [2023-02-27T06:18:31.407Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/zimaster-studywithme/versions/86616edafede2501 {"name":"projects/681825239052/sites/zimaster-studywithme/versions/86616edafede2501","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-02-27T08:54:58.029406Z","createUser":{"email":"codesimonwise@gmail.com"},"finalizeTime":"2023-02-27T08:55:04.450380Z","finalizeUser":{"email":"codesimonwise@gmail.com"}}
+[debug] [2023-02-27T06:18:31.407Z] [hosting] finalized version for zimaster-studywithme:[object Object]
+[info] +  hosting[zimaster-studywithme]: version finalized 
+[info] i  hosting[zimaster-studywithme]: releasing new version... 
+[debug] [2023-02-27T06:18:31.409Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/zimaster-studywithme/channels/live/releases versionName=projects%2F681825239052%2Fsites%2Fzimaster-studywithme%2Fversions%2F86616edafede2501
+[debug] [2023-02-27T06:18:31.409Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/zimaster-studywithme/channels/live/releases {}
